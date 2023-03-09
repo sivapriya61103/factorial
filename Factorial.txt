@@ -1,0 +1,85 @@
+DESCRIPTION:
+
+We define a function factorial() that accepts an integer argument – n. 
+Inside the loop body, we use a ternary operator: Return 1, 
+if the input number is 0 or 1; because the factorial will be 1. 
+else, for any other positive integer input, multiply the value of n with 
+factorial(n-1) and return the final factorial value
+
+
+#Using for loop
+
+num = int(input("Enter a number: "))
+fac = 1
+for i in range(1, num + 1):
+     fac = fac * i 
+print("factorial of ", num, " is ", fac)
+
+INPUT:
+
+Enter a number: 5
+
+
+OUTPUT:
+
+factorial of  5  is  120
+
+#Using wile loop
+
+num = int(input("Enter a number: "))
+fac = 1
+i = 1
+while i <= num:
+   fac = fac * i
+   i = i + 1
+print("factorial of ", num, " is ", fac)
+
+INPUT:
+
+Enter a number: 5
+
+
+OUTPUT:
+
+factorial of  5  is  120
+
+
+#Using function
+
+def factorial(x):
+    if x == 1:
+        return 1
+    else:
+        return (x * factorial(x-1))
+num = int(input("Enter a Number:"))
+result = factorial(num)
+print("The factorial of", num, "is", result)
+
+INPUT:
+
+Enter a Number:5
+
+
+OUTPUT:
+
+The factorial of 5 is 120
+
+
+#Using bulit-in function
+
+import math  
+def fact(n):  
+    return(math.factorial(n))  
+num = int(input("Enter the number:"))  
+f = fact(num)  
+print("Factorial of", num, "is", f)
+
+INPUT;
+
+Enter the number:5
+
+OUTPUT:
+
+
+Factorial of 5 is 120
+
